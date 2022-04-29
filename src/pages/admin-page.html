@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.2/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="/xflash-web/dist/output.css" rel="stylesheet" />
+    <title>X-Flash | Admin</title>
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header class="bg-yellow-300 absolute top-0 left-0 w-full flex items-center z-10">
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="index.html" class="font-bold italic text-2xl text-slate-900 block py-4">X-Flash</a>
+          </div>
+          <div class="flex items-center px-4">
+            <button id="hamburger" name="hamburger" class="block absolute right-4 lg:hidden">
+              <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+            </button>
+
+            <nav id="nav-menu" class="hidden absolute py-4 bg-white shadow-lg rounded-lg w-full right-0 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a href="index.html" class="text-lg text-dark py-y mb-3 mx-8 flex group-hover:text-white">Home</a>
+                </li>
+                <li class="group">
+                  <a href="list-hp.html" class="text-lg text-dark py-y mb-3 mx-8 flex group-hover:text-white">Data Servis</a>
+                </li>
+                <li class="group">
+                  <a href="login.html" class="text-lg text-dark py-y mb-3 mx-8 flex group-hover:text-white">Login</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- form Section Start -->
+    <section id="about" class="pt-36 pb-32">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-10 lg:w-1/4 border shadow-lg p-8 rounded-lg">
+            <img src="https://source.unsplash.com/150x150/?portrait?3" alt="" class="w-32 h-32 mx-auto rounded-full dark:bg-coolGray-500 aspect-square" />
+            <div class="space-y-4 text-center divide-y divide-coolGray-700">
+              <div class="my-4 space-y-1">
+                <h2 class="text-xl font-semibold sm:text-2xl">Admin X-Flash</h2>
+                <p class="px-5 text-xs sm:text-base dark:text-coolGray-400">Staff</p>
+              </div>
+              <div class="flex justify-center pt-2 align-center">
+                <h1 class="text-sm">Toko Cabang Bekasi Utara</h1>
+              </div>
+            </div>
+            <div class="mt-20 px-6">
+              <ul class="space-y-2">
+                <li>
+                  <a href="list-hp.html" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
+                    <div class="flex">
+                      <span class="material-icons h-8 text-slate-500 transition duration-75 group-hover:text-gray-900"> groups </span>
+                      <span class="ml-3 text-slate-500">Data Service Customer</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="admin-page.html" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
+                    <div class="flex">
+                      <span class="material-icons h-8 text-slate-500 transition duration-75 group-hover:text-gray-900"> group_add </span>
+                      <span class="ml-3 text-slate-500">Data Service Toko</span>
+                    </div>
+                  </a>
+                </li>
+                <!-- <li>
+                  <button
+                    type="button"
+                    class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group"
+                    aria-controls="dropdown-example"
+                    data-collapse-toggle="dropdown-example"
+                  >
+                    <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Data Service Toko</span>
+                    <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                  </button>
+                  <ul id="dropdown-example" class="hidden py-2 space-y-2">
+                    <li>
+                      <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group">Cabang Bekasi Barat</a>
+                    </li>
+                    <li>
+                      <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group">Cabang Bekasi Timur</a>
+                    </li>
+                    <li>
+                      <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group">Cabang Bekasi Utara</a>
+                    </li>
+                  </ul>
+                </li> -->
+              </ul>
+              <ul class="pt-4 mt-32 space-y-2 border-t border-gray-200 dark:border-gray-700">
+                <li>
+                  <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
+                    <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span class="flex-1 ml-3 whitespace-nowrap text-slate-500">Logout</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-full px-10 lg:w-3/4">
+            <form class="container flex flex-col mx-auto">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 col-span-full">
+                <div class="mb-6">
+                  <label for="nota" class="block mb-2 text-sm font-medium text-gray-900">Nomor Nota</label>
+                  <input
+                    type="text"
+                    id="nota"
+                    class="bg-gray-50 italic border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="Masukkan nomor nota"
+                    required=""
+                  />
+                </div>
+                <div class="mb-6">
+                  <label for="toko-cabang" class="block mb-2 text-sm font-medium text-gray-900">Toko Cabang</label>
+                  <select id="toko-cabang" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option selected>Pilih toko cabang</option>
+                    <option value="1">Toko Cabang Bekasi Barat</option>
+                    <option value="2">Toko Cabang Bekasi Timur</option>
+                    <option value="3">Toko Cabang Bekasi Utara</option>
+                  </select>
+                </div>
+                <div class="mb-6">
+                  <label for="tipe-handphone" class="block mb-2 text-sm font-medium text-gray-900">Tipe Handphone</label>
+                  <input
+                    type="text"
+                    id="tipe-handphone"
+                    class="bg-gray-50 italic border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="Masukkan Tipe Handphone"
+                    required=""
+                  />
+                </div>
+                <div class="mb-6">
+                  <label for="customer" class="block mb-2 text-sm font-medium text-gray-900">Customer</label>
+                  <input
+                    type="text"
+                    id="customer"
+                    class="bg-gray-50 italic border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="Masukkan Nama Customer"
+                    required=""
+                  />
+                </div>
+                <div class="mb-6 col-span-full">
+                  <label for="kerusakan" class="block mb-2 text-sm font-medium text-gray-900">Kerusakan</label>
+                  <input
+                    type="text"
+                    id="kerusakan"
+                    class="bg-gray-50 italic border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="Kondisi Kerusakan"
+                    required=""
+                  />
+                </div>
+                <div class="mb-6 col-span-full">
+                  <label for="keterangan" class="block mb-2 text-sm font-medium text-gray-900">Keterangan</label>
+                  <textarea
+                    id="keterangan"
+                    class="bg-gray-50 italic border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="Jelaskan Keterangan Lanjutan"
+                    required=""
+                  ></textarea>
+                </div>
+                <div class="mb-6 col-span-full">
+                  <label for="teknisi" class="block mb-2 text-sm font-medium text-gray-900">Teknisi</label>
+                  <input
+                    type="text"
+                    id="teknisi"
+                    class="bg-gray-50 italic border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="Teknisi yang akan melayani"
+                    required=""
+                  />
+                </div>
+              </div>
+              <div class="">
+                <span class="block text-sm mb-2 text-red-500">*Mohon periksa kembali sebelum mengirim data, jangan sampai salah!</span>
+              </div>
+              <button
+                type="submit"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Kirim Data
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- form Section End -->
+
+    <!--JS & AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="/xflash-web/dist/js/script.js"></script>
+    <script src="https://unpkg.com/flowbite@1.4.2/dist/flowbite.js"></script>
+  </body>
+</html>

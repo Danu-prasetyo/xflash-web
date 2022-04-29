@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.2/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="/xflash-web/dist/output.css" rel="stylesheet" />
+    <title>X-Flash | Check Handphone</title>
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header class="bg-yellow-300 absolute top-0 left-0 w-full flex items-center z-10">
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="index.html" class="font-bold italic text-2xl text-slate-900 block py-4">X-Flash</a>
+          </div>
+          <div class="flex items-center px-4">
+            <button id="hamburger" name="hamburger" class="block absolute right-4 lg:hidden">
+              <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+            </button>
+
+            <nav id="nav-menu" class="hidden absolute py-4 bg-white shadow-lg rounded-lg w-full right-0 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a href="index.html" class="text-lg text-dark py-y mb-3 mx-8 flex group-hover:text-white">Back to Home</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Search & Table -->
+    <section id="list-hp">
+      <div class="container py-32 px-4" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="relative overflow-x-auto shadow-lg sm:rounded-lg">
+          <div class="p-4">
+            <label for="table-search" class="sr-only">Search</label>
+            <div class="relative mt-1">
+              <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <input
+                type="text"
+                id="table-search"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 pl-10 p-2.5"
+                placeholder="Masukkan Nomor Nota"
+              />
+            </div>
+          </div>
+          <table class="w-full text-sm text-left text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-200">
+              <tr>
+                <th scope="col" class="px-6 py-3">No. Nota</th>
+                <th scope="col" class="px-6 py-3">Toko Cabang</th>
+                <th scope="col" class="px-6 py-3">Tipe Handphone</th>
+                <th scope="col" class="px-6 py-3">Customer</th>
+                <th scope="col" class="px-6 py-3">Kerusakan</th>
+                <th scope="col" class="px-6 py-3">Keterangan</th>
+                <th scope="col" class="px-6 py-3">Teknisi</th>
+                <th scope="col" class="px-6 py-3">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white border-b hover:bg-gray-100">
+                <td class="w-1/12 p-4 text-center">12345</td>
+                <td class="px-6 py-4">Toko Cabang Bekasi Utara</td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">IPhone 13 Pro Max</th>
+                <td class="px-6 py-4">Danu</td>
+                <td class="px-6 py-4">Ganti LCD</td>
+                <td class="px-6 py-4">LCD pecah dan perlu di Lem biru</td>
+                <td class="px-6 py-4">Riko si Gembel</td>
+                <td class="px-6 py-4 text-green-500">Selesai</td>
+              </tr>
+              <tr class="bg-white border-b hover:bg-gray-100">
+                <td class="w-1/12 p-4 text-center">12345</td>
+                <td class="px-6 py-4">Toko Cabang Bekasi Utara</td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Samsung S22 Ultra</th>
+                <td class="px-6 py-4">Dani</td>
+                <td class="px-6 py-4">Ganti Baterai</td>
+                <td class="px-6 py-4">Hp Tidak bisa dicas</td>
+                <td class="px-6 py-4">Riko si Gembel</td>
+                <td class="px-6 py-4 text-sky-500">Sedang diservice</td>
+              </tr>
+              <tr class="bg-white border-b hover:bg-gray-100">
+                <td class="w-1/12 p-4 text-center">12345</td>
+                <td class="px-6 py-4">Toko Cabang Bekasi Utara</td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Xiaomi Mi12</th>
+                <td class="px-6 py-4">Dina</td>
+                <td class="px-6 py-4">Ganti LCD dan Baterai</td>
+                <td class="px-6 py-4">LCD pecah dan Baterai Lowbat</td>
+                <td class="px-6 py-4">Riko si Gembel</td>
+                <td class="px-6 py-4 text-sky-500">Sedang diservice</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-5">
+          <span class="block text-xs mb-2">*Data diupdate paling lambat 15 menit setelah barang diterima teknisi, mohon bersabar menunggu</span>
+          <span class="block text-xs mb-2">**Jika Handphone anda belum masuk daftar silahkan hubungi admin toko yang bersangkutan </span>
+        </div>
+      </div>
+    </section>
+
+    <!--JS & AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="/xflash-web/dist/js/script.js"></script>
+    <script src="https://unpkg.com/flowbite@1.4.2/dist/flowbite.js"></script>
+  </body>
+</html>
