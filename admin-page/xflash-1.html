@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.2/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/flowbite@1.4.5/dist/datepicker.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="/xflash-web/dist/output.css" rel="stylesheet" />
     <title>X-Flash | Admin</title>
@@ -22,7 +23,7 @@
       <div class="container">
         <div class="flex items-center justify-between relative">
           <div class="px-4">
-            <a href="index.html" class="font-bold italic text-2xl text-slate-900 block py-4">X-Flash</a>
+            <a href="/xflash-web/index.html" class="font-bold italic text-2xl text-slate-900 block py-4">X-Flash</a>
           </div>
           <div class="flex items-center px-4">
             <button id="hamburger" name="hamburger" class="block absolute right-4 lg:hidden">
@@ -34,13 +35,10 @@
             <nav id="nav-menu" class="hidden absolute py-4 bg-white shadow-lg rounded-lg w-full right-0 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
               <ul class="block lg:flex">
                 <li class="group">
-                  <a href="index.html" class="text-lg text-dark py-y mb-3 mx-8 flex group-hover:text-white">Home</a>
+                  <a href="/xflash-web/index.html" class="text-lg text-dark py-y mb-3 mx-8 flex group-hover:text-white">Home</a>
                 </li>
                 <li class="group">
-                  <a href="list-hp.html" class="text-lg text-dark py-y mb-3 mx-8 flex group-hover:text-white">Data Servis</a>
-                </li>
-                <li class="group">
-                  <a href="login.html" class="text-lg text-dark py-y mb-3 mx-8 flex group-hover:text-white">Login</a>
+                  <a href="/xflash-web/index.html" class="text-lg text-dark py-y mb-3 mx-8 flex group-hover:text-white">logout</a>
                 </li>
               </ul>
             </nav>
@@ -51,8 +49,8 @@
     <!-- Header End -->
 
     <!-- form Section Start -->
-    <section id="about" class="pt-36 pb-32">
-      <div class="container">
+    <section id="about" class="pt-36 pb-10">
+      <div class="container-xl px-4">
         <div class="flex flex-wrap">
           <div class="w-full px-4 mb-10 lg:w-1/4 border shadow-lg p-8 rounded-lg">
             <img src="https://source.unsplash.com/150x150/?portrait?3" alt="" class="w-32 h-32 mx-auto rounded-full dark:bg-coolGray-500 aspect-square" />
@@ -62,12 +60,12 @@
                 <p class="px-5 text-xs sm:text-base dark:text-coolGray-400">Staff</p>
               </div>
               <div class="flex justify-center pt-2 align-center">
-                <h1 class="text-sm">Toko Cabang Bekasi Utara</h1>
+                <h1 class="text-sm">Selamat datang di dashboard admin</h1>
               </div>
             </div>
             <div class="mt-20 px-6">
               <ul class="space-y-2">
-                <li>
+                <!-- <li>
                   <a href="list-hp.html" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
                     <div class="flex">
                       <span class="material-icons h-8 text-slate-500 transition duration-75 group-hover:text-gray-900"> groups </span>
@@ -82,7 +80,7 @@
                       <span class="ml-3 text-slate-500">Data Service Toko</span>
                     </div>
                   </a>
-                </li>
+                </li> -->
                 <!-- <li>
                   <button
                     type="button"
@@ -116,7 +114,7 @@
                 </li> -->
               </ul>
               <ul class="pt-4 mt-32 space-y-2 border-t border-gray-200 dark:border-gray-700">
-                <li>
+                <!-- <li>
                   <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
                     <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path
@@ -127,13 +125,15 @@
                     </svg>
                     <span class="flex-1 ml-3 whitespace-nowrap text-slate-500">Logout</span>
                   </a>
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>
+          <!-- form section start -->
           <div class="w-full px-10 lg:w-3/4">
             <form class="container flex flex-col mx-auto">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 col-span-full">
+              <span class="text-center pb-2 font-semibold text-xl lg:text-3xl border-b">Masukkan Data Service</span>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 col-span-full pt-4">
                 <div class="mb-6">
                   <label for="nota" class="block mb-2 text-sm font-medium text-gray-900">Nomor Nota</label>
                   <input
@@ -218,6 +218,135 @@
       </div>
     </section>
     <!-- form Section End -->
+
+    <!-- Data Service -->
+    <section id="list-hp">
+      <div class="container-xxl mx-auto py-4 px-4">
+        <div class="relative overflow-x-auto sm:rounded-lg">
+          <div class="flex">
+            <div class="p-4 inline-block">
+              <label for="table-search" class="sr-only">Search</label>
+              <div class="relative mt-1">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  id="table-search"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 pl-10 p-2.5"
+                  placeholder="Search"
+                />
+              </div>
+            </div>
+
+            <div class="p-4">
+              <div class="relative mt-1">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  datepicker=""
+                  datepicker-autohide
+                  datepicker-orientation="bottom left"
+                  type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input"
+                  placeholder="Select date"
+                />
+              </div>
+            </div>
+          </div>
+
+          <table class="w-full text-sm text-left text-gray-500 border">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-200">
+              <tr>
+                <th scope="col" class="px-6 py-3">No. Nota</th>
+                <th scope="col" class="px-6 py-3">Tanggal</th>
+                <th scope="col" class="px-6 py-3">Toko Cabang</th>
+                <th scope="col" class="px-6 py-3">Tipe Handphone</th>
+                <th scope="col" class="px-6 py-3">Customer</th>
+                <th scope="col" class="px-6 py-3">Kerusakan</th>
+                <th scope="col" class="px-6 py-3">Keterangan</th>
+                <th scope="col" class="px-6 py-3">Teknisi</th>
+                <th scope="col" class="px-6 py-3 text-center">Status</th>
+                <th scope="col" class="px-6 py-3 text-center">Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white border-b hover:bg-gray-100">
+                <td class="w-1/12 p-4 text-center border-r">12345</td>
+                <td class="w-1/12 p-4 text-center border-r">12/12/2020</td>
+                <td class="px-6 py-4 border-r text-xs font-medium text-gray-900">Toko Cabang Bekasi Utara</td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap border-r">IPhone 13 Pro Max</th>
+                <td class="px-6 py-4 border-r">Danu</td>
+                <td class="px-6 py-4 border-r">Ganti LCD</td>
+                <td class="px-6 py-4 border-r text-xs">LCD pecah dan perlu di Lem biru</td>
+                <td class="px-6 py-4 border-r">Riko si Gembel</td>
+                <!-- <td class="px-6 py-4 text-green-500 text-center">Selesai</td> -->
+                <td class="px-2 py-4 border-r text-center">
+                  <div class="flex">
+                    <a href="#" class="text-blue-500 hover:text-blue-700 inline-block pr-4 text-center text-xs">
+                      <span class="material-icons"> engineering </span>
+                      <span>proses</span>
+                    </a>
+                    <a href="#" class="text-green-500 hover:text-green-700 inline-block pr-4 text-center text-xs">
+                      <span class="material-icons"> check_circle </span>
+                      <span>Selesai</span>
+                    </a>
+                  </div>
+                </td>
+
+                <td class="px-2 py-4">
+                  <div class="flex">
+                    <a href="#" class="text-blue-500 hover:text-blue-700 inline-block pr-4 text-center text-xs">
+                      <span class="material-icons"> edit </span>
+                      <span>edit</span>
+                    </a>
+                    <a href="#" class="text-red-500 hover:text-red-700 inline-block text-center text-xs">
+                      <span class="material-icons"> delete_forever </span>
+                      <span>hapus</span>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="bg-white border-b hover:bg-gray-100">
+                <td class="w-1/12 p-4 text-center border-r">12345</td>
+                <td class="w-1/12 p-4 text-center border-r">12/12/2020</td>
+                <td class="px-6 py-4 border-r">Toko Cabang Bekasi Utara</td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap border-r">Samsung S22 Ultra</th>
+                <td class="px-6 py-4 border-r">Dani</td>
+                <td class="px-6 py-4">Ganti Baterai</td>
+                <td class="px-6 py-4 border-r">Hp Tidak bisa dicas</td>
+                <td class="px-6 py-4 border-r">Riko si Gembel</td>
+                <td class="px-6 py-4 border-r text-sky-500">Sedang diservice</td>
+              </tr>
+              <tr class="bg-white border-b hover:bg-gray-100">
+                <td class="w-1/12 p-4 text-center border-r">12345</td>
+                <td class="w-1/12 p-4 text-center border-r">12/12/2020</td>
+                <td class="px-6 py-4 border-r">Toko Cabang Bekasi Utara</td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap border-r">Xiaomi Mi12</th>
+                <td class="px-6 py-4 border-r">Dina</td>
+                <td class="px-6 py-4 border-r">Ganti LCD dan Baterai</td>
+                <td class="px-6 py-4 border-r">LCD pecah dan Baterai Lowbat</td>
+                <td class="px-6 py-4 border-r">Riko si Gembel</td>
+                <td class="px-6 py-4 border-r text-sky-500">Sedang diservice</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-5">
+          <span class="block text-xs mb-2 text-red-600">*PASTIKAN DATA DI ISI DENGAN BENAR</span>
+        </div>
+      </div>
+    </section>
 
     <!--JS & AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

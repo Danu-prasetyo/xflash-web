@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./src/**/*.{html,js}'],
+  content: ['index.html', './src/**/*.{html,js}', 'admin-page/**/*.{html,js}', 'xflash-web/**/*.{html,js}'],
   theme: {
     container: {
       center: true,
