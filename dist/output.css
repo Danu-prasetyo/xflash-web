@@ -741,20 +741,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1.5rem;
 }
 
-.w-80 {
-  width: 20rem;
-}
-
 .w-1\/12 {
   width: 8.333333%;
-}
-
-.w-1\/2 {
-  width: 50%;
-}
-
-.w-28 {
-  width: 7rem;
 }
 
 .max-w-xl {
@@ -771,14 +759,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex-shrink-0 {
   flex-shrink: 0;
-}
-
-.shrink {
-  flex-shrink: 1;
-}
-
-.grow {
-  flex-grow: 1;
 }
 
 .origin-top-left {
@@ -1158,10 +1138,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1rem;
 }
 
-.pl-5 {
-  padding-left: 1.25rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -1301,11 +1277,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
-}
-
-.text-sky-500 {
-  --tw-text-opacity: 1;
-  color: rgb(14 165 233 / var(--tw-text-opacity));
 }
 
 .text-red-600 {
@@ -1609,14 +1580,6 @@ body {
     border-radius: 0.5rem;
   }
 
-  .sm\:p-2\.5 {
-    padding: 0.625rem;
-  }
-
-  .sm\:p-2 {
-    padding: 0.5rem;
-  }
-
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -1677,14 +1640,6 @@ body {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:p-2\.5 {
-    padding: 0.625rem;
-  }
-
-  .md\:p-2 {
-    padding: 0.5rem;
   }
 
   .md\:px-6 {
