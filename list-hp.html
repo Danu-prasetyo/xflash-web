@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.2/dist/flowbite.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="/xflash-web/dist/output.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@kontenbase/sdk"></script>
     <title>X-Flash | Check Handphone</title>
   </head>
   <body>
@@ -68,46 +70,18 @@
             <thead class="text-xs text-gray-700 uppercase bg-gray-200">
               <tr>
                 <th scope="col" class="px-6 py-3">No. Nota</th>
+                <th scope="col" class="px-6 py-3">Customer</th>
                 <th scope="col" class="px-6 py-3">Toko Cabang</th>
                 <th scope="col" class="px-6 py-3">Tipe Handphone</th>
-                <th scope="col" class="px-6 py-3">Customer</th>
                 <th scope="col" class="px-6 py-3">Kerusakan</th>
                 <th scope="col" class="px-6 py-3">Keterangan</th>
                 <th scope="col" class="px-6 py-3">Teknisi</th>
                 <th scope="col" class="px-6 py-3">Status</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="bg-white border-b hover:bg-gray-100">
-                <td class="w-1/12 p-4 text-center">12345</td>
-                <td class="px-6 py-4">Toko Cabang Bekasi Utara</td>
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">IPhone 13 Pro Max</th>
-                <td class="px-6 py-4">Danu</td>
-                <td class="px-6 py-4">Ganti LCD</td>
-                <td class="px-6 py-4">LCD pecah dan perlu di Lem biru</td>
-                <td class="px-6 py-4">Riko si Gembel</td>
-                <td class="px-6 py-4 text-green-500">Selesai</td>
-              </tr>
-              <tr class="bg-white border-b hover:bg-gray-100">
-                <td class="w-1/12 p-4 text-center">12345</td>
-                <td class="px-6 py-4">Toko Cabang Bekasi Utara</td>
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Samsung S22 Ultra</th>
-                <td class="px-6 py-4">Dani</td>
-                <td class="px-6 py-4">Ganti Baterai</td>
-                <td class="px-6 py-4">Hp Tidak bisa dicas</td>
-                <td class="px-6 py-4">Riko si Gembel</td>
-                <td class="px-6 py-4 text-sky-500">Sedang diservice</td>
-              </tr>
-              <tr class="bg-white border-b hover:bg-gray-100">
-                <td class="w-1/12 p-4 text-center">12345</td>
-                <td class="px-6 py-4">Toko Cabang Bekasi Utara</td>
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Xiaomi Mi12</th>
-                <td class="px-6 py-4">Dina</td>
-                <td class="px-6 py-4">Ganti LCD dan Baterai</td>
-                <td class="px-6 py-4">LCD pecah dan Baterai Lowbat</td>
-                <td class="px-6 py-4">Riko si Gembel</td>
-                <td class="px-6 py-4 text-sky-500">Sedang diservice</td>
-              </tr>
+
+            <tbody id="listhp">
+              <!-- data service -->
             </tbody>
           </table>
         </div>
@@ -118,12 +92,40 @@
       </div>
     </section>
 
+    <!-- kontenbase get data -->
+    <script>
+      fetch('https://api.kontenbase.com/query/api/v1/cf72bd06-5af0-48b9-9711-e1e07f0ab9ac/data_service').then((res) => {
+        res.json().then((data) => {
+          console.log(data);
+          if (data.length > 0) {
+            var temp = '';
+
+            //looping data
+            data.forEach((u) => {
+              temp += "<tr class='bg-white border-b hover:bg-gray-100'>";
+              temp += "<td class='w-1/12 p-4 text-center'>" + u.nota + '</td>';
+              temp += "<td class='px-6 py-4'>" + u.customer + '</td>';
+              temp += "<td class='px-6 py-4'>" + u.toko + '</td>';
+              temp += "<th scope='row' class='px-6 py-4 font-medium text-gray-900 whitespace-nowrap'>" + u.type + '</th>';
+              temp += "<td class='px-6 py-4'>" + u.kerusakan + '</td>';
+              temp += "<td class='px-6 py-4'>" + u.keterangan + '</td>';
+              temp += "<td class='px-6 py-4'>" + u.teknisi + '</td>';
+              temp += "<td class='px-6 py-4 text-green-500'>" + u.progress + '</td>';
+              temp += '</tr>';
+            });
+            document.getElementById('listhp').innerHTML = temp;
+          }
+        });
+      });
+    </script>
+
     <!--JS & AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
 
+    <!-- <script type="module" src="main.js"></script> -->
     <script src="/xflash-web/dist/js/script.js"></script>
     <script src="https://unpkg.com/flowbite@1.4.2/dist/flowbite.js"></script>
   </body>
